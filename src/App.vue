@@ -4,22 +4,31 @@ import { ref } from "vue";
 const count = ref(0);
 </script>
 <template>
-  <div>
-    <h1>Counter</h1>
-    <p>{{ count }}</p>
-    <div>
-      <button @click="count--">-</button>
-      <button @click="count++">+</button>
+  <div class="container-fluid container-counter h-100">
+    <div class="row header justify-content-center">
+      <div class="col-md-10">
+        <h1>Counter</h1>
+        <h3>{{ count }}</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <button class="btn btn-lg btn-light" @click="count--">-</button>
+        <button class="btn btn-lg btn-light" @click="count++">+</button>
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
-div {
-  height: 100vh;
-  width: 100vw;
+.container-counter {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+}
+.header {
+  text-align: center;
+}
+button {
+  margin-left: 25%;
 }
 </style>
