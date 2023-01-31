@@ -28,7 +28,9 @@ const count = ref(0);
 .header {
   text-align: center;
 }
-button {
-  margin-left: 25%;
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  gap: 190px;
 }
 </style>
